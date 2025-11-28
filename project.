@@ -1,0 +1,28 @@
+#  os
+
+import os
+os.startfile("file:///C:/Users/DELL/Downloads/AEC_III_ASSIGNMENT(1).pdf")
+
+#  voice jarvis 
+
+import matplotlib.pyplot as plt
+import pyttsx3
+import speech_recognition as sr
+import pywhatkit
+import webbrowser
+import os
+
+speaker = pyttsx3.init()
+mic = sr.Recognizer()
+
+speaker.say("welcome megha  ")
+speaker.runAndWait()
+with sr.Microphone() as source:
+    print("Start Speaking ..........")
+    voice = mic.listen(source)
+    text = mic.recognize_google(voice)
+if "open Notepad" in text:
+    print ("Opening Notepad...")
+    os.system("Notepad")
+
+    
